@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.yhong.asframe"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+        ndk {
+//            选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+//            abiFilters 'armeabi' ,'arm64-v8a'
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            def date = new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+08"))
+            if (variant.buildType.name.equals('debug')) {
+                outputFileName = cfgs.appName + "_${date}_${versionName}_${versionCode}_debug.apk"
+            }
+            if (variant.buildType.name.equals('release')) {
+                outputFileName = cfgs.appName + "_${date}_${versionName}_${versionCode}.apk"
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    dexOptions {
+//        incremental true
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation dpes["junit"]
+    implementation dpes["runner"]
+    implementation dpes["espresso"]
+    implementation dpes["appcompat"]
+    implementation dpes["design"]
+    implementation dpes["cardview"]
+    implementation dpes["recyclerview"]
+    implementation dpes["multidex"]
+    implementation dpes["banner"]
+    implementation(dpes["ultraviewpager"]) {
+        transitive = true
+    }
+    implementation project(':SmartRefreshLayoutFragment')//下拉刷新封装
+    implementation project(':AndroidImageCropper')//图片裁剪
+    implementation project(':QrCodeScan')//二维码扫描
+    implementation project(':JiaoZiVideoPlayer')//视频播放
+    implementation project(':WxCameraView')//拍摄视频，选择本地视频
+    implementation project(':WxImageSelector')//图片多选
+    implementation project(':WxVoiceSelector')//语音录制
+    implementation project(':fileselectlibrary')//文件选择
+    debugImplementation dpes["leakcanary1"]
+    releaseImplementation dpes["leakcanary2"]
+}

@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion cfgs.compileSdkVersion
+    buildToolsVersion cfgs.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion cfgs.minSdkVersion
+        targetSdkVersion cfgs.targetSdkVersion
+        versionCode 1
+        versionName "1.0.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation dpes["appcompat"]
+    implementation dpes["design"]
+    implementation dpes["cardview"]
+    implementation dpes["recyclerview"]
+    implementation dpes["prdownloader"]
+    api dpes["autolayout"]
+//    api dpes["okgo"]
+    api dpes["updateapp"]
+    api files('libs/com.mcxiaoke.volley-library-1.0.19.jar')
+    api files('libs/fastjson-1.2.31.jar')
+    api files('libs/glide-3.6.1.jar')
+    api files('libs/grant-permissions-1.1.2.jar')
+    api files('libs/gson-2.8.5.jar')
+    api files('libs/httpmime-4.2.5.jar')
+    api files('libs/jsoup-1.12.1.jar')
+    api files('libs/org.apache.http.legacy.jar')
+    api files('libs/zm-bus-event-1.0.jar')
+    api files('libs/zm-http-volley-1.2.jar')
+    api files('libs/zm-imageloader-1.0.jar')
+    api dpes["refreshlayout"]
+    api dpes["okhttputils"]
+    api dpes["text_okhttputils"]
+
+}

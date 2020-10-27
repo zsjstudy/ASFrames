@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT" />
+        </compositeConfiguration>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AFramework" />
+            <option value="$PROJECT_DIR$/AndroidImageCropper" />
+            <option value="$PROJECT_DIR$/JiaoZiVideoPlayer" />
+            <option value="$PROJECT_DIR$/QrCodeScan" />
+            <option value="$PROJECT_DIR$/SmartRefreshLayoutFragment" />
+            <option value="$PROJECT_DIR$/WxCameraView" />
+            <option value="$PROJECT_DIR$/WxImageSelector" />
+            <option value="$PROJECT_DIR$/WxVoiceSelector" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/fileselectlibrary" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

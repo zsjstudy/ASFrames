@@ -1,0 +1,3 @@
+include ':app',':fileselectlibrary', ':AFramework',
+        ':SmartRefreshLayoutFragment', ':AndroidImageCropper', ':JiaoZiVideoPlayer',
+        ':WxCameraView', ':WxImageSelector', ':WxVoiceSelector', ':QrCodeScan'
