@@ -18,8 +18,8 @@
 ```java
     dependencies {
             ...
-             // implementation 'com.github.zsjstudy:ASFrame3.5.0:VERSION_CODE'
-            implementation 'com.github.zsjstudy:ASFrame3.5.0:1.0.0'
+             // implementation 'com.github.zsjstudy:ASFrames:VERSION_CODE'
+            implementation 'com.github.zsjstudy:ASFrames:1.0.0'
     }
 ```
 
@@ -28,23 +28,23 @@
     dependencies {
             ...
             //网络请求框架
-            implementation 'com.github.zsjstudy.ASFrame3.5.0:AFramework:VERSION_CODE'
+            implementation 'com.github.zsjstudy.ASFrames:AFramework:VERSION_CODE'
             //图片裁剪
-            implementation 'com.github.zsjstudy.ASFrame3.5.0:AndroidImageCropper:VERSION_CODE'
+            implementation 'com.github.zsjstudy.ASFrames:AndroidImageCropper:VERSION_CODE'
             //视频播放框架
-            implementation 'com.github.zsjstudy.ASFrame3.5.0:JiaoZiVideoPlayer:VERSION_CODE'
+            implementation 'com.github.zsjstudy.ASFrames:JiaoZiVideoPlayer:VERSION_CODE'
             //扫码框架
-            implementation 'com.github.zsjstudy.ASFrame3.5.0:QrCodeScan:VERSION_CODE'
+            implementation 'com.github.zsjstudy.ASFrames:QrCodeScan:VERSION_CODE'
             //下拉刷新上拉加载框架
-            implementation 'com.github.zsjstudy.ASFrame3.5.0:SmartRefreshLayoutFragment:VERSION_CODE'
+            implementation 'com.github.zsjstudy.ASFrames:SmartRefreshLayoutFragment:VERSION_CODE'
             //选择、拍照视频 如果是以此种方法集成，想要预览视频的话需要把JiaoZiVideoPlayer也集成
-            implementation 'com.github.zsjstudy.ASFrame3.5.0:WxCameraView:VERSION_CODE'
+            implementation 'com.github.zsjstudy.ASFrames:WxCameraView:VERSION_CODE'
             //图片多选、单选
-            implementation 'com.github.zsjstudy.ASFrame3.5.0:WxImageSelector:VERSION_CODE'
+            implementation 'com.github.zsjstudy.ASFrames:WxImageSelector:VERSION_CODE'
             //语音录制
-            implementation 'com.github.zsjstudy.ASFrame3.5.0:WxVoiceSelector:VERSION_CODE'
+            implementation 'com.github.zsjstudy.ASFrames:WxVoiceSelector:VERSION_CODE'
             //文件选择上传
-            implementation 'com.github.zsjstudy.ASFrame3.5.0:fileselectlibrary:VERSION_CODE'
+            implementation 'com.github.zsjstudy.ASFrames:fileselectlibrary:VERSION_CODE'
     }
 
 
