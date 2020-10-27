@@ -67,10 +67,18 @@ dependencies {
     implementation dpes["cardview"]
     implementation dpes["recyclerview"]
     implementation dpes["multidex"]
+//    implementation(dpes["banner"]) {
+//        exclude group: "com.android.support", module: "support-v4"
+//    }
+//    implementation(dpes["ultraviewpager"]) {
+//        exclude group: "com.android.support", module: "support-v4"
+//        transitive = true
+//    }
     implementation dpes["banner"]
     implementation(dpes["ultraviewpager"]) {
         transitive = true
     }
+    implementation project(':AFramework')
     implementation project(':SmartRefreshLayoutFragment')//下拉刷新封装
     implementation project(':AndroidImageCropper')//图片裁剪
     implementation project(':QrCodeScan')//二维码扫描
